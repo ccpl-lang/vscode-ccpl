@@ -20,6 +20,11 @@ jobs:
         with:
           node-version: 20
 
+      - name: Read version
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
       - name: Install dependencies
         run: npm install
 
@@ -43,9 +48,12 @@ jobs:
             npx vsce publish --packagePath ccpl.vsix
           fi
 
-      - name: Attach to release
-        if: startsWith(github.ref, 'refs/tags/')
+      - name: Publish release
+        if: startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/main'
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ startsWith(github.ref, 'refs/tags/v') && github.ref_name || format('v{0}', env.VERSION) }}
+          name: ${{ startsWith(github.ref, 'refs/tags/v') && github.ref_name || format('v{0}', env.VERSION) }}
           files: ccpl.vsix
           generate_release_notes: true
+          make_latest: true
