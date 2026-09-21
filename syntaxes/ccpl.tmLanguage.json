@@ -1,0 +1,65 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "CCPL",
+  "scopeName": "source.ccpl",
+  "fileTypes": ["ccpl"],
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#keywords" },
+    { "include": "#builtins" },
+    { "include": "#types" },
+    { "include": "#numbers" },
+    { "include": "#operators" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.block.ccpl",
+          "begin": "--\\[\\[",
+          "end": "\\]\\]"
+        },
+        {
+          "name": "comment.line.ccpl",
+          "match": "--.*$"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.ccpl",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.ccpl",
+              "match": "\\\\[nrtabfv0\\\\\"]"
+            }
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "match": "\\b(var|variable|func|end|if|then|elseif|else|while|do|repeat|until|for|return|break|continue|get|and|or|not|true|false|nil)\\b",
+      "name": "keyword.control.ccpl"
+    },
+    "builtins": {
+      "match": "\\b(say|oh|hey|tonumber|tostring|malloc|calloc|realloc|free)\\b",
+      "name": "support.function.ccpl"
+    },
+    "types": {
+      "match": "\\b(i8|i16|i32|i64|u8|u16|u32|u64|f32|f64|bool|char|ptr)\\b",
+      "name": "storage.type.ccpl"
+    },
+    "numbers": {
+      "match": "\\b(0[xX][0-9a-fA-F]+|\\d+\\.\\d*([eE][+-]?\\d+)?|\\.\\d+([eE][+-]?\\d+)?|\\d+([eE][+-]?\\d+)?)\\b",
+      "name": "constant.numeric.ccpl"
+    },
+    "operators": {
+      "match": "(?:\\.\\.|==|~=|<=|>=|[=<>+\\-*/%,&()\\[\\]{}\"])|\\b(and|or|not)\\b",
+      "name": "keyword.operator.ccpl"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "ccpl",
+  "displayName": "CCPL",
+  "description": "Syntax highlighting for CCPL (Cool Compilable Programming Language)",
+  "version": "0.2.0",
+  "publisher": "ccpl",
+  "license": "MIT",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itzdanti/vscode-ccpl.git"
+  },
+  "homepage": "https://github.com/itzdanti/vscode-ccpl#readme",
+  "bugs": {
+    "url": "https://github.com/itzdanti/vscode-ccpl/issues"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "ccpl",
+    "language",
+    "syntax-highlighting",
+    "tcc",
+    "compiler"
+  ],
+  "galleryBanner": {
+    "color": "#181a22",
+    "theme": "dark"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "ccpl",
+        "aliases": [
+          "CCPL",
+          "ccpl"
+        ],
+        "extensions": [
+          ".ccpl"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ccpl",
+        "scopeName": "source.ccpl",
+        "path": "./syntaxes/ccpl.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^2.22.0"
+  }
+}
