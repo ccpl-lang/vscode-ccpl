@@ -8,11 +8,11 @@
   "icon": "icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/itzdanti/vscode-ccpl.git"
+    "url": "https://github.com/ccpl-lang/vscode-ccpl.git"
   },
-  "homepage": "https://github.com/itzdanti/vscode-ccpl#readme",
+  "homepage": "https://github.com/ccpl-lang/vscode-ccpl#readme",
   "bugs": {
-    "url": "https://github.com/itzdanti/vscode-ccpl/issues"
+    "url": "https://github.com/ccpl-lang/vscode-ccpl/issues"
   },
   "engines": {
     "vscode": "^1.75.0"

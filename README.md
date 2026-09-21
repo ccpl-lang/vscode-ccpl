@@ -39,7 +39,7 @@ code --install-extension ccpl-0.2.0.vsix
 ### From source
 
 ```sh
-git clone https://github.com/itzdanti/vscode-ccpl.git
+git clone https://github.com/ccpl-lang/vscode-ccpl.git
 cd vscode-ccpl
 npm install
 npx vsce package
