@@ -2,7 +2,7 @@
 
 [![Marketplace](https://img.shields.io/badge/marketplace-CCPL-53A0F5.svg)](https://marketplace.visualstudio.com/items?itemName=ccpl.ccpl)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-0.2.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.3.0-blue.svg)](CHANGELOG.md)
 
 Syntax highlighting and editor support for **CCPL** â€” the *Cool Compilable Programming Language*, a Lua-like language that compiles straight to native executables through [TinyCC](https://bellard.org/tcc/).
 
@@ -33,7 +33,7 @@ code --install-extension ccpl.ccpl
 ### From a `.vsix`
 
 ```sh
-code --install-extension ccpl-0.2.0.vsix
+code --install-extension ccpl-0.3.0.vsix
 ```
 
 ### From source
@@ -43,7 +43,7 @@ git clone https://github.com/ccpl-lang/vscode-ccpl.git
 cd vscode-ccpl
 npm install
 npx vsce package
-code --install-extension ccpl-0.2.0.vsix
+code --install-extension ccpl-0.3.0.vsix
 ```
 
 ## A taste of CCPL

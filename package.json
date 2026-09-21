@@ -2,7 +2,7 @@
   "name": "ccpl",
   "displayName": "CCPL",
   "description": "Syntax highlighting for CCPL (Cool Compilable Programming Language)",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "publisher": "ccpl",
   "license": "MIT",
   "icon": "ccplicon.png",
