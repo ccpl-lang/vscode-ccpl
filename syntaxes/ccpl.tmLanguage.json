@@ -35,22 +35,22 @@
           "patterns": [
             {
               "name": "constant.character.escape.ccpl",
-              "match": "\\\\[nrtabfv0\\\\\"]"
+              "match": "\\\\[nrtabfv\\\\\"0-9]"
             }
           ]
         }
       ]
     },
     "keywords": {
-      "match": "\\b(var|variable|func|end|if|then|elseif|else|while|do|repeat|until|for|return|break|continue|get|and|or|not|true|false|nil)\\b",
+      "match": "\\b(var|variable|func|end|if|then|elseif|else|while|do|repeat|until|for|return|break|continue|get|and|or|not|true|false|nil|extern|from|as)\\b",
       "name": "keyword.control.ccpl"
     },
     "builtins": {
-      "match": "\\b(say|oh|hey|tonumber|tostring|malloc|calloc|realloc|free)\\b",
+      "match": "\\b(say|oh|hey|tonumber|tostring|malloc|calloc|realloc|free|pyexec|pyeval)\\b",
       "name": "support.function.ccpl"
     },
     "types": {
-      "match": "\\b(i8|i16|i32|i64|u8|u16|u32|u64|f32|f64|bool|char|ptr)\\b",
+      "match": "\\b(i8|i16|i32|i64|u8|u16|u32|u64|f32|f64|bool|char|ptr|cstr)\\b",
       "name": "storage.type.ccpl"
     },
     "numbers": {
